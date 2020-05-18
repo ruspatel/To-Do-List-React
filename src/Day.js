@@ -29,6 +29,7 @@ class Day extends Component{
         };
 
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     addItem(e) {
@@ -52,16 +53,27 @@ class Day extends Component{
         e.preventDefault();
     }
 
+    deleteItem(key) {
+        var filteredItems = this.state.items.filter(function (item){
+            return (item.key !== key);
+        });
+
+        this.setState({
+            items: filteredItems
+        });
+    }
+
     render() {
         return(
             <div className="day">
                 <form onSubmit={this.addItem}>
-                    {/* <h1>{props.day}</h1> */}
+                    <h1>{this.props.day}</h1>
                     <input ref={(a) => this._inputElement = a} type="text" placeholder="enter task"></input>
                     <button type="submit">add</button>
             
                 </form>
-                <Items entries = {this.state.items}/>
+                <Items entries = {this.state.items}
+                        delete = {this.deleteItem}/>
             </div>
         );
     }

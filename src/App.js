@@ -9,11 +9,11 @@ function App() {
       <h1>My To Do List</h1>
       </div>
       <div className="week">
-        <Day/>
-        <Day/>
-        <Day />
-        <Day/>
-        <Day/>
+        <Day day="Monday"/>
+        <Day day="Tuesday"/>
+        <Day day="Wednesday"/>
+        <Day day="Thursday"/>
+        <Day day="Friday"/>
       </div>
     </div>
   );
