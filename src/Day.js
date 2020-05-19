@@ -67,9 +67,11 @@ class Day extends Component{
         return(
             <div className="day">
                 <form onSubmit={this.addItem}>
-                    <h1>{this.props.day}</h1>
-                    <input ref={(a) => this._inputElement = a} type="text" placeholder="enter task"></input>
-                    <button type="submit">add</button>
+                    <div className="date">{this.props.day}</div>
+                    <div className="textbox">
+                    <div className="inputbox"><input ref={(a) => this._inputElement = a} type="text" placeholder="enter task"></input></div>
+                    <div className="buttonbox"><button type="submit">add</button></div>
+                    </div>
             
                 </form>
                 <Items entries = {this.state.items}

@@ -1,10 +1,15 @@
-.items{
-    padding: 10px;
-    font-size: 5px;
-} 
+.totalItems{
+    /* overflow: hidden; */
+    list-style-type: none;
 
-.item{
-    padding: 10px;
-    border: 2px solid brown;
-    border-radius: 5px;
+}
+.item li{
+    margin-right: 40px;
+    border: 2px solid rgb(45, 173, 233);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background-color: rgb(45, 173, 233);
+    color: black;
+    list-style-type: none;
+
 }

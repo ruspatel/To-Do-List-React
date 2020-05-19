@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './items.css';
+import './App.css';
 
 class items extends Component{
     constructor(props) {
@@ -9,7 +10,8 @@ class items extends Component{
     }
 
     createTasks(item){
-        return <li className="item" onClick={() => this.delete(item.key)} 
+        return <li className="item" list-style-type = "none"
+        onClick={() => this.delete(item.key)} 
                     key={item.key}>{item.text}</li>
         // return <li onClick={() => this.delete(item.key)} 
         //             key={item.key}>{item.text}</li>
@@ -24,8 +26,10 @@ class items extends Component{
         var listItems = todoEntries.map(this.createTasks);
 
         return (
-            <div className="item">
-                <ul>{listItems}</ul>
+            <div className="totalItems">
+                <div className="item">
+                    <ul>{listItems}</ul>
+                </div>
             </div>
             // <ul>{listItems}</ul>
         );
